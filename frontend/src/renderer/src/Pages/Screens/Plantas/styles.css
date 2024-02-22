@@ -1,8 +1,49 @@
-.plantas-grid-container {
+.main-container {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
     gap: 20px;
+    padding: 50px 30px;
+
+    box-sizing: border-box;
+}
+
+.search-and-back-input-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-plantas-title {
+    color: var(--main-title-color);
+    font-family: sans-serif;
+
+    width: 100%;
+    text-align: center;
+}
+
+.plantas-grid-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
 
     justify-content: center;
     align-items: center;
+
+    margin-top: 30px;
 }

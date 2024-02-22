@@ -1,5 +1,10 @@
 import { PlantaCard } from "../../components/PlantaCard";
 
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
+
+import "./styles.css"
+
 const PlantasScreen = () => {
     
 	const array = [{
@@ -13,7 +18,22 @@ const PlantasScreen = () => {
 
     return(
         <>
-            <div>Plantas</div>
+        <div className="main-container">
+            <div className="search-and-back-input-container">
+                <button>
+                    <IoIosArrowBack/>
+                </button>
+
+                <div className="search-input">
+                    <input type="text" />
+                    <IoIosSearch />
+                </div>
+            </div>
+
+            <h1 className="main-plantas-title">
+                Wiki de Plantas
+            </h1>
+
             <div className="plantas-grid-container">
                 {array.map((item, index) => (
                     <PlantaCard
@@ -22,6 +42,8 @@ const PlantasScreen = () => {
                     />
                 ))}
             </div>
+        </div>
+            
 
         </>
     );

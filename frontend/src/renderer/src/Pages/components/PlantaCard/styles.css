@@ -1,3 +1,24 @@
 .planta-card {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.planta-card button {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 20px 40px;
+
+    color: #FFF;
+    background-color: var(--main-buttons-color);
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
 }

@@ -5,6 +5,8 @@ import { AppProvider } from '../../Context';
 import { Home } from "../Screens/Home";
 import { PlantasScreen } from "../Screens/Plantas";
 
+import "./App.css";
+
 const Wrapper = ({children}) => {
     // const location = useLocation();
     React.useLayoutEffect(() => {
