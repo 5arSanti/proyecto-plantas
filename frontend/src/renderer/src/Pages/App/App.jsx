@@ -3,6 +3,7 @@ import React from "react";
 
 import { AppProvider } from '../../Context';
 import { Home } from "../Screens/Home";
+import { PlantasScreen } from "../Screens/Plantas";
 
 const Wrapper = ({children}) => {
     // const location = useLocation();
@@ -31,7 +32,7 @@ const App = () => {
 		<AppProvider>
 			{/* <BrowserRouter> */}
 			<Wrapper>
-				<Home/>
+				<PlantasScreen/>
 			</Wrapper>
 		</AppProvider>
 	);
