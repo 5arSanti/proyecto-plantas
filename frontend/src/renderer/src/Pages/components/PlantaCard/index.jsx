@@ -6,7 +6,7 @@ const PlantaCard = ({item}) => {
     return(
         <div className="planta-card">
             <img src={imagen1} alt={`imgen_${imagen1}`} />
-            <button>{item.NAME}</button>
+            <button>{item.NOMBRE_PLANTA}</button>
         </div>
     );
 }

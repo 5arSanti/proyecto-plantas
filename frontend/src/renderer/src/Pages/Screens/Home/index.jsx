@@ -7,11 +7,7 @@ const Home = () => {
 
 	// console.log(context.responseData);
 
-	const array = [{
-		NOMBRE: "Planta 1"
-	},{
-		NOMBRE: "Planta 2"
-	}]
+	
 
 	return(
 		<>
@@ -19,12 +15,12 @@ const Home = () => {
 			<h1>HOME</h1>
 			<p>Hola</p>
 
-			{array?.map((item, index) => (
+			{context.responseData?.map((item, index) => (
 				<>
 					<p
 						key={index}
 					>
-						Nombre {item.NOMBRE}
+						Nombre {item.NOMBRE_PLANTA}
 					</p>
 				</>
 			))}

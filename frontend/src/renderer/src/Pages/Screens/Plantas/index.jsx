@@ -4,17 +4,13 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 
 import "./styles.css"
+import React from "react";
+import { AppContext } from "../../../Context";
 
 const PlantasScreen = () => {
-    
-	const array = [{
-		NOMBRE: "Planta 1",
-        TYPE: "ROSA"
-	},
-    {
-		NOMBRE: "Planta 2",
-        TYPE: "Coliflor"
-	}]
+    const context = React.useContext(AppContext)
+
+
 
     return(
         <>
@@ -35,7 +31,7 @@ const PlantasScreen = () => {
             </h1>
 
             <div className="plantas-grid-container">
-                {array.map((item, index) => (
+			{context.responseData?.map((item, index) => (
                     <PlantaCard
                         key={index}
                         item={item}

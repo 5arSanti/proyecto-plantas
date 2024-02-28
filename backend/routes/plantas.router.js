@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (request, response) => {
 	try {
-		const result = await executeQuery(`SELECT * FROM `);
+		const result = await executeQuery(`SELECT * FROM plantas`);
 
 		return response.status(200).json(result);
 	}
