@@ -31,7 +31,7 @@ const PlantasScreen = () => {
             </h1>
 
             <div className="plantas-grid-container">
-			{context.responseData?.map((item, index) => (
+			{context.responseData?.plantas?.map((item, index) => (
                     <PlantaCard
                         key={index}
                         item={item}
@@ -39,7 +39,7 @@ const PlantasScreen = () => {
                 ))}
             </div>
         </div>
-            
+
 
         </>
     );

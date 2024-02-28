@@ -7,7 +7,7 @@ router.get("/", async (request, response) => {
 	try {
 		const result = await executeQuery(`SELECT * FROM plantas`);
 
-		return response.status(200).json(result);
+		return response.status(200).json({ plantas: result });
 	}
 	catch (err) {
 		return response.status(500).json("Server Internal Error");
