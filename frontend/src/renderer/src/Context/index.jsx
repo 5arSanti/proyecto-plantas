@@ -58,13 +58,25 @@ const AppProvider = ({children}) => {
     }, []);
 
 
+    //Abrir modal de detalles
+    const [openModal, setOpenModal] = React.useState({
+        status: false,
+        item: null,
+    });
+    React.useEffect(() => {
+        console.log(openModal.status)
+    }, [openModal]);
+
 
 	return(
 		<AppContext.Provider
 			value={{
 				loading,
 				setLoading,
-				responseData
+				responseData,
+
+                openModal,
+                setOpenModal,
 			}}
 		>
 			{children}

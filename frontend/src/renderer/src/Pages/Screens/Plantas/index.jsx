@@ -10,8 +10,6 @@ import { AppContext } from "../../../Context";
 const PlantasScreen = () => {
     const context = React.useContext(AppContext)
 
-
-
     return(
         <>
         <div className="main-container">

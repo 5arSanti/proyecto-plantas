@@ -2,10 +2,10 @@ import React from "react";
 // import { HashRouter, Navigate, useLocation, useRoutes } from "react-router-dom";
 
 import { AppProvider } from '../../Context';
-import { Home } from "../Screens/Home";
 import { PlantasScreen } from "../Screens/Plantas";
 
 import "./App.css";
+import { DetallesPlantas } from "../Screens/DetallesPlantas";
 
 const Wrapper = ({children}) => {
     // const location = useLocation();
@@ -35,6 +35,7 @@ const App = () => {
 			{/* <BrowserRouter> */}
 			<Wrapper>
 				<PlantasScreen/>
+				<DetallesPlantas/>
 			</Wrapper>
 		</AppProvider>
 	);

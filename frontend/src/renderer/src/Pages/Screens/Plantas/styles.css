@@ -40,10 +40,13 @@
 
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 30px;
 
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     margin-top: 30px;
+    overflow: auto;
+
+    padding-bottom: 20px;
 }

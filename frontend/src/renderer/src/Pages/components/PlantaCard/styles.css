@@ -1,10 +1,46 @@
 .planta-card {
+    padding: 15px;
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     gap: 30px;
+
+    min-width: 300px;
+
+    background-color: rgba(0,0,0,0.025);
+    border-radius: 25px;
+    transition: all 0.25s ease;
+
+    cursor: pointer;
+}
+
+.planta-card:hover img {
+    transform: scale(1.1);
+}
+
+.planta-card .images-container {
+    width: 100%;
+    height: 250px;
+    max-height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.planta-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    transition: all 0.2s ease;
 }
 
 .planta-card button {
@@ -21,4 +57,10 @@
     border-radius: 10px;
 
     cursor: pointer;
+    opacity: 0.75;
+    transition: all .2s ease;
+}
+
+.planta-card:hover button {
+    opacity: 1;
 }
