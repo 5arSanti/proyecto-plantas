@@ -9,6 +9,21 @@ const AppProvider = ({children}) => {
 	const api = `${domain}/api/v1`;
 	const [apiUri, setApiUri] = React.useState(api);
 
+	const [searchValue, setSearchValue] = React.useState("");
+
+	//Filtros
+	const [filters, setFilters] = React.useState({
+        BUSQUEDA: "",
+    });
+
+    const handleFilterChange = (filterName, value) => {
+        setFilters((prevFilters) => ({ ...prevFilters, [filterName]: value }));
+    };
+
+    const handleSearch = (searchValue) => {
+        handleFilterChange("BUSQUEDA", searchValue);
+    };
+
 	// Funciones para realizar fetch al backend
 	const [loading, setLoading] = React.useState(false);
 	const [responseData, setResponseData ] = React.useState(null);
@@ -32,8 +47,11 @@ const AppProvider = ({children}) => {
     const fetchAllData = async () => {
         try {
             setLoading(true);
+
+			const filterParams = new URLSearchParams(filters);
+
             const endpoints = [
-				"plantas"
+				`plantas?${filterParams.toString()}`
             ];
 
             // Realizar todas las solicitudes en paralelo
@@ -55,7 +73,7 @@ const AppProvider = ({children}) => {
 
     React.useEffect(() => {
         fetchAllData();
-    }, []);
+    }, [filters]);
 
 
     //Abrir modal de detalles
@@ -63,9 +81,9 @@ const AppProvider = ({children}) => {
         status: false,
         item: null,
     });
-    React.useEffect(() => {
-        console.log(openModal.status)
-    }, [openModal]);
+
+	//Filtros
+
 
 
 	return(
@@ -77,6 +95,12 @@ const AppProvider = ({children}) => {
 
                 openModal,
                 setOpenModal,
+
+				searchValue,
+				setSearchValue,
+				filters,
+				handleFilterChange,
+				handleSearch,
 			}}
 		>
 			{children}

@@ -1,0 +1,77 @@
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-container input {
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #FFF;
+    color: #000;
+}
+.input-container input::placeholder {
+    opacity: 0.75;
+    font-style: italic;
+}
+.input-container input:focus {
+    border: 2px solid var(--main-buttons-color);
+    outline: none;
+}
+
+.input-and-button-container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    gap: 10px;
+    align-items: center;
+}
+.input-and-button-container button{
+    height: 100%;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--main-buttons-color);
+    color: var(--white);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+	border: none;
+}
+.input-and-button-container button svg{
+    height: 20px;
+    width: 20px;
+	fill: #FFF;
+
+    transition: all 0.2s ease;
+}
+.input-and-button-container:hover button svg{
+    transform: scale(1.15);
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    gap: 5px;
+}
+
+@media (max-width: 450px) {
+    .input-container label {
+        font-size: 14px;
+    }
+}

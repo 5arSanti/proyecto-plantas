@@ -34,19 +34,3 @@
     width: 100%;
     text-align: center;
 }
-
-.plantas-grid-container {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-
-    justify-content: flex-start;
-    align-items: center;
-
-    margin-top: 30px;
-    overflow: auto;
-
-    padding-bottom: 20px;
-}
