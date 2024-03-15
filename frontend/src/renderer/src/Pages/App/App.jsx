@@ -43,7 +43,6 @@ const App = () => {
 		<AppProvider>
 			<HashRouter>
 				<Wrapper>
-					<PlantasScreen/>
 					<AppRoutes/>
 					<DetallesPlantas/>
 				</Wrapper>

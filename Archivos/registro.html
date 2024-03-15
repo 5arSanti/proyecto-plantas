@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3fbec; /* Color de fondo predeterminado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .return-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de volver al inicio -->
+    <a href="index.html" class="return-button">
+        <img src="file:///C:/Users/USUARIO/electronjs/ejemplopaginas/prototipo/atras.png" alt="Volver al Inicio" width="50">
+    </a>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <button class="button" onclick="redirectToRegistroUsuario()">Registrarse</button>
+        <button class="button" onclick="redirectToInicioSesion()">Iniciar Sesión</button>
+    </div>
+
+    <script>
+        function redirectToRegistroUsuario() {
+            // Guardar el color original en el almacenamiento local antes de redireccionar
+            localStorage.setItem('originalBackgroundColor', document.body.style.backgroundColor);
+            window.location.href = "registro_usuario.html";
+        }
+
+        function redirectToInicioSesion() {
+            // Guardar el color original en el almacenamiento local antes de redireccionar
+            localStorage.setItem('originalBackgroundColor', document.body.style.backgroundColor);
+            window.location.href = "inicio_sesion.html";
+        }
+
+        // Aplicar el color de fondo al cargar la página
+        document.addEventListener("DOMContentLoaded", function() {
+            var color = localStorage.getItem('backgroundColor');
+            if (color) {
+                document.body.style.backgroundColor = color;
+            }
+        });
+    </script>
+</body>
+</html>

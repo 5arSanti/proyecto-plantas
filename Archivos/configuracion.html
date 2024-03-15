@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3fbec; /* Color de fondo predeterminado */
+        }
+        .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .change-color-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #2f5f02; /* Color del botón */
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .return-button {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Ajusta la posición según tu preferencia */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="change-color-button" onclick="changeColor('#2d572c')">Cambiar a Verde Oscuro</button>
+        <button class="change-color-button" onclick="restoreColor('#f3fbec')">Restaurar Color</button>
+        <br><br>
+    </div>
+
+    <!-- Reemplaza el botón por la imagen -->
+    <a href="index.html" class="return-button">
+        <!-- Agrega el atributo width para controlar el tamaño de la imagen -->
+        <img src="file:///C:/Users/USUARIO/electronjs/ejemplopaginas/prototipo/atras.png" alt="Volver al Inicio" width="50">
+    </a>
+
+    <script>
+        // Recuperar el color almacenado en localStorage al cargar la página
+        document.addEventListener("DOMContentLoaded", function() {
+            var storedColor = localStorage.getItem('backgroundColor');
+            if (storedColor) {
+                document.body.style.backgroundColor = storedColor;
+            }
+        });
+
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+            localStorage.setItem('backgroundColor', color); // Almacenar el color en localStorage
+        }
+
+        function restoreColor(color) {
+            document.body.style.backgroundColor = color;
+            localStorage.setItem('backgroundColor', color);
+        }
+    </script>
+</body>
+</html>
