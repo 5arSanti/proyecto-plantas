@@ -88,14 +88,16 @@ const AppProvider = ({children}) => {
     const handleColorsByFilters = () => {
         const root = document.documentElement;
         const normalStyles = {
+            "--main-body-color": "#EAFAF1",
             "--main-buttons-color": "#95E85C",
             "--main-title-color": "#648c01",
-			"--login-border-color": "#ccc"
+			"--login-border-color": "#27AE60"
         };
         const highContrastStyles = {
-            "--main-buttons-color": "#000",
-            "--main-title-color": "#000",
-			"--login-border-color": "#000"
+            "--main-body-color": "#1E8449",
+            "--main-buttons-color": "#239B56",
+            "--main-title-color": "#F7F9F9",
+			"--login-border-color": "#196F3D"
         };
 
         const styles = activeHighContrast ? highContrastStyles : normalStyles;
