@@ -1,0 +1,40 @@
+.login-container {
+	border: 1px solid var(--login-border-color);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: var(--white);
+}
+.return-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+/* Estilos para el formulario */
+.login-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.login-form .login-input {
+	margin-bottom: 10px;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid var(--login-border-color);
+}
+.button {
+	padding: 10px 20px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--main-buttons-color);
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	opacity: 0.75;
+}
+.button:hover {
+	opacity: 1;
+}

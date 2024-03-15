@@ -11,6 +11,10 @@ import imagen14 from "./cactusordenador.jpg"
 import imagen16 from "./zebra.jpg"
 
 
+import plant from "./plant.png"
+import ecobloom from "./ecobloom.png"
+import atras from "./atras.png"
+
 
 export {
     imagen1,
@@ -24,4 +28,7 @@ export {
     imagen13,
     imagen14,
     imagen16,
+	plant,
+	ecobloom,
+	atras
 }

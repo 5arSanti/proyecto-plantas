@@ -1,6 +1,9 @@
 :root {
     --main-buttons-color: #95E85C;
-    --main-title-color: #648c01;
+	--main-title-color: #648c01;
+	--login-border-color: #ccc;
+
+	--white: #FFF;
 }
 
 body{

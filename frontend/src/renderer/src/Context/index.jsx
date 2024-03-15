@@ -76,6 +76,36 @@ const AppProvider = ({children}) => {
     }, [filters]);
 
 
+
+	//CAMBIO DE COLORES
+    const [activeButton, setActiveButton] = React.useState(1);
+    const [activeHighContrast, setActiveHighContrast] = React.useState(false);
+
+    React.useEffect(() => {
+        handleColorsByFilters();
+    }, [activeButton, activeHighContrast]);
+
+    const handleColorsByFilters = () => {
+        const root = document.documentElement;
+        const normalStyles = {
+            "--main-buttons-color": "#95E85C",
+            "--main-title-color": "#648c01",
+			"--login-border-color": "#ccc"
+        };
+        const highContrastStyles = {
+            "--main-buttons-color": "#000",
+            "--main-title-color": "#000",
+			"--login-border-color": "#000"
+        };
+
+        const styles = activeHighContrast ? highContrastStyles : normalStyles;
+        Object.entries(styles).forEach(([key, value]) => {
+            root.style.setProperty(key, value);
+        });
+    };
+
+
+
     //Abrir modal de detalles
     const [openModal, setOpenModal] = React.useState({
         status: false,
@@ -89,6 +119,8 @@ const AppProvider = ({children}) => {
 	return(
 		<AppContext.Provider
 			value={{
+				apiUri,
+
 				loading,
 				setLoading,
 				responseData,
@@ -101,6 +133,9 @@ const AppProvider = ({children}) => {
 				filters,
 				handleFilterChange,
 				handleSearch,
+
+				setActiveHighContrast,
+				activeHighContrast,
 			}}
 		>
 			{children}

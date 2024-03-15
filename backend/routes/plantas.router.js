@@ -13,9 +13,8 @@ router.get("/", async (request, response) => {
 			WHERE LOWER(NOMBRE_PLANTA) LIKE LOWER('%${searchTerm}%')
 			OR (NOMBRE_C_PLANTA) LIKE ('%${searchTerm}%')
 			OR (CARACTERISTICAS_PLANTA) LIKE ('%${searchTerm}%')
+			OR (ILUMINACION_PLANTA) LIKE ('%${searchTerm}%')
 		`;
-
-		console.log(baseQuery);
 
 		const result = await executeQuery(baseQuery);
 

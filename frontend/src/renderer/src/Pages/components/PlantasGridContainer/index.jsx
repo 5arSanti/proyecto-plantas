@@ -35,14 +35,6 @@ const PlantasGridContainer = () => {
 					/>
 				))}
 			</Slider>
-			<div className="plantas-grid-container">
-				{context.responseData?.plantas?.map((item, index) => (
-					<PlantaCard
-						key={index}
-						item={item}
-					/>
-				))}
-			</div>
 		</>
 
 	);

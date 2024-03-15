@@ -1,0 +1,59 @@
+#plant {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 560px;
+	height: auto;
+	z-index: 1;
+}
+#ecobloom {
+	margin-left: 20px;
+	margin-top: 100px;
+	width: 270px;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	border: 2px solid white; /* Agrega un contorno blanco */
+	border-radius: 180%; /* Hace que los bordes sean redondeados para formar un contorno circular */
+	box-sizing: border-box; /* Incluye el borde en el tamaño total del elemento */
+}
+.button-container {
+	position: absolute;
+	top: 35%;
+	right: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	z-index: 2;
+}
+.button {
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #2f5f02; /* Verde oscuro */
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	width: 200px;
+}
+.button:last-child {
+	top: 60px;
+	z-index: 3;
+}
+.config-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.config-icon {
+	width: 50px;
+	height: 50px;
+	background-image: url("file:///C:/Users/USUARIO/electronjs/ejemplopaginas/prototipo/rueda.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
