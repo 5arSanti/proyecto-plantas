@@ -91,10 +91,9 @@ const AppProvider = ({children}) => {
 			"--main-body-color": "#F3FBEC",
             "--main-buttons-color": "#95E85C",
             "--main-title-color": "#648c01",
-			"--login-border-color": "#ccc"
+			"--login-border-color": "#27AE60"
         };
         const highContrastStyles = {
-			"--main-body-color": "#000",
             "--main-buttons-color": "#000",
             "--main-title-color": "#000",
 			"--login-border-color": "#000"
