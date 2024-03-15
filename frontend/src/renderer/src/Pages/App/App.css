@@ -1,4 +1,5 @@
 :root {
+	--main-body-color: #F3FBEC;
     --main-buttons-color: #95E85C;
 	--main-title-color: #648c01;
 	--login-border-color: #ccc;
@@ -9,7 +10,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #F3FBEC;
+    background-color: var(--main-body-color);
 }
 
 h1 {

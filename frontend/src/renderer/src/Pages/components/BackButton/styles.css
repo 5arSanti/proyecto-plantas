@@ -1,0 +1,26 @@
+.back-button-container {
+	padding: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--main-buttons-color);
+
+	position: fixed;
+	top: 10px;
+	left: 20px;
+
+	opacity: 0.75;
+	transition: all 0.2s ease;
+	border-radius: 10px;
+}
+.back-button-container:hover {
+	opacity: 1;
+}
+
+.back-button-container svg {
+	width: 20px;
+	height: 20px;
+	fill: #FFFFFF;
+}

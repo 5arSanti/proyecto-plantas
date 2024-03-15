@@ -51,10 +51,11 @@ const Home = () => {
 			<Link className="config-button" to={"config"}>
 				<div className="config-icon"></div>
 			</Link>
+
 			<img id="ecobloom" src={ecobloom} alt="ecobloom" />
 			<img id="plant" src={plant}  alt="plant" />
 
-			<div className="button-container">
+			<div className="home-buttons-container">
 				<Link className="button" to={"/registro"}>Acceder como usuario</Link>
 				<Link className="button" to={"/admin"}>Acceder como administrador</Link>
 			</div>

@@ -4,6 +4,7 @@ import "./styles.css";
 import { atras } from "../../../assets";
 import { AppContext } from "../../../Context";
 import React from "react";
+import { BackButton } from "../../components/BackButton";
 
 const ConfigScreen = () => {
 	const context = React.useContext(AppContext);
@@ -37,10 +38,8 @@ const ConfigScreen = () => {
 				<br></br>
 			</div>
 
+			<BackButton uri={"/"}/>
 
-			<Link to={"/"} className="return-button">
-				<img src={atras} alt="Volver al Inicio" width="50" />
-			</Link>
 		</>
 	);
 }

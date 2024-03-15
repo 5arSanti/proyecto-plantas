@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./styles.css";
 import { atras } from "../../../assets";
+import { BackButton } from "../../components/BackButton";
 
 const RegisterScreen = () => {
 	function redirectToRegistroUsuario() {
@@ -25,15 +26,14 @@ const RegisterScreen = () => {
 
 	return(
 		<>
-			<Link to={"/"} className="return-button">
-				<img src={atras} alt="Volver al Inicio" width="50" />
-			</Link>
+			<BackButton uri={"/"}/>
 
-
-			<div className="container">
-				<h2>Registro de Usuario</h2>
-				<Link className="button" to={"/register-user"}>Registrarse</Link>
-				<Link className="button" to={"/login"}>Iniciar Sesión</Link>
+			<div className="admin-form-container">
+				<div className="container">
+					<h2>Registro de Usuario</h2>
+					<Link className="button" to={"/register-user"}>Registrarse</Link>
+					<Link className="button" to={"/login"}>Iniciar Sesión</Link>
+				</div>
 			</div>
 		</>
 	);

@@ -6,6 +6,7 @@ import React from "react";
 import axios from "axios";
 
 import { AppContext } from "../../../Context";
+import { BackButton } from "../../components/BackButton";
 
 const AdminScreen = () => {
 	const context = React.useContext(AppContext);
@@ -20,7 +21,7 @@ const AdminScreen = () => {
         event.preventDefault();
 
         try {
-            axios.post(`${context.apiUri}/users/login`, values)
+            axios.post(`${context.apiUri}/users/admin-login`, values)
                 .then(response => {
                     const {data} = response;
 
@@ -37,22 +38,23 @@ const AdminScreen = () => {
 
 	return(
 		<>
-			<Link to={"/registro"} className="return-button">
-				<img src={atras} alt="Volver al Inicio" width="50" />
-			</Link>
+		<div className="admin-form-container">
+			<BackButton uri={"/registro"}/>
 
 			<div className="login-container">
 				<h2>Iniciar Sesión como Administrado</h2>
 				<form onSubmit={handleSubmit} className="login-form">
-					<input className="login-input" type="email" name="username" placeholder="Correo" required
+					<input className="login-input" type="text" name="username" placeholder="Usuario" required
 						onChange={(event) => {setValues({...values, email: event.target.value})}}
 					/><br />
 					<input className="login-input" type="password" name="password" placeholder="Contraseña" required
 						onChange={(event) => {setValues({...values, password: event.target.value})}}
 					/><br />
-					<input className="button" type="submit" value="Iniciar Sesión" />
+					<input type="submit" value="Iniciar Sesión" />
 				</form>
 			</div>
+		</div>
+
 		</>
 	);
 }

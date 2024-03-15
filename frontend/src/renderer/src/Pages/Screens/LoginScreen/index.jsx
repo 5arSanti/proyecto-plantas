@@ -4,6 +4,7 @@ import { atras } from "../../../assets";
 import React from "react";
 import axios from "axios";
 import { AppContext } from "../../../Context";
+import { BackButton } from "../../components/BackButton";
 
 const LoginScreen = () => {
 	const context = React.useContext(AppContext);
@@ -42,23 +43,24 @@ const LoginScreen = () => {
 
 	return(
 		<>
-			<Link to={"/registro"} className="return-button">
-				<img src={atras} alt="Volver al Inicio" width="50" />
-			</Link>
+			<BackButton uri={"/registro"}/>
 
-			<div className="container">
-				<h2>Iniciar Sesión</h2>
-				<form onSubmit={handleSubmit}>
-					<input type="email" name="username" placeholder="Correo" required
-						onChange={(event) => {setValues({...values, email: event.target.value})}}
-					/><br />
-					<input type="password" name="password" placeholder="Contraseña" required
-						onChange={(event) => {setValues({...values, password: event.target.value})}}
-					/><br />
-					<input type="submit" value="Iniciar Sesión" />
-				</form>
-				<Link to={"/register-user"} className="register-link">No tengo cuenta aún, deseo registrarme</Link>
+			<div className="admin-form-container">
+				<div className="container">
+					<h2>Iniciar Sesión</h2>
+					<form onSubmit={handleSubmit}>
+						<input type="email" name="username" placeholder="Correo" required
+							onChange={(event) => {setValues({...values, email: event.target.value})}}
+						/><br />
+						<input type="password" name="password" placeholder="Contraseña" required
+							onChange={(event) => {setValues({...values, password: event.target.value})}}
+						/><br />
+						<input type="submit" value="Iniciar Sesión" />
+					</form>
+					<Link to={"/register-user"} className="register-link">No tengo cuenta aún, deseo registrarme</Link>
+				</div>
 			</div>
+
 		</>
 	);
 }
